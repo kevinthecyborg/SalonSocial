@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SalonSocial - Empowering the Salon Community</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <style>
+            body {
+                padding-top: 102px;
+                padding-bottom: 60px;
+            }
+        </style>
+        <!-- TODO: Complete this project :) -->
+    </head>
+    <body>
+        <nav id="usernav" class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
+    <div class="container">    
+        <div class="navbar-header">
+            <a class="navbar-brand nav-logo" href="index.html"></a>
+        </div>
+        <ul class="nav navbar-nav pull-right user-info">
+            <li class="divider-vertical"></li>
+            <li class="messages">
+                <a href="#">
+                    <i class="flaticon solid mail-4"></i>
+                </a>    
+                <span class="notificationBadge msg">25</span>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="notifications">
+                <a href="#">
+                    <i class="flaticon solid bell-1"></i>
+                </a>
+                <span class="notificationBadge notify">69</span>
+            </li>
+            <li class="divider-vertical un"></li>
+            <li class="dropdown user-account-info">
+                <a href="#" class="dropdown-toggle user-nav" data-toggle="dropdown">
+                    <img class="profile-pic pp-30 mr-5" src="assets/img/users/kevin.jpg">
+                    Kevin Michael
+                </a>
+                <ul class="dropdown-menu user-menu">
+                    <li>
+                        <a href="#"><i class="flaticon solid id-2"></i> View Profile</a>
+                    </li>
+                    <li>
+                        <a href="account-settings-professional.html"><i class="flaticon solid user-1"></i> Edit Profile</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="flaticon solid move-right-1"></i> Log Out</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="divider-vertical"></li>
+        </ul>
+    </div>
+</nav>
+        <nav id="navbar" class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand nav-logo visible-xs" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid house-2"></i>Stream</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid house"></i>My Stream</a></li>
+                        <li><a href="index.html"><i class="flaticon solid rocket-1"></i>Trending</a></li>
+                        <li><a href="#"><i class="flaticon solid nature-2"></i>New</a></li>
+                        <li><a href="#"><i class="flaticon solid trophy-1"></i>Featured</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid explore"></i>Explore</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid user-4"></i>Hair</a></li>
+                        <li><a href="#"><i class="flaticon solid eye-1"></i>Makeup</a></li>
+                        <li><a href="#"><i class="flaticon solid brush-1"></i>Nails</a></li>
+                        <li><a href="#"><i class="flaticon solid tag-1"></i>Products</a></li>
+                        <li><a href="#"><i class="flaticon solid group-1"></i>Professionals</a></li>
+                        <li><a href="#"><i class="flaticon solid group-2"></i>Clients</a></li>
+                        <li><a href="#"><i class="flaticon solid store-2"></i>Salons</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="flaticon solid compose-4"></i>Blog</a></li>
+                <li><a href="#"><i class="flaticon solid chat-3"></i>Forum</a></li>
+                <li><a href="profile-professional.html"><i class="flaticon solid id-2"></i>Profile</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid camera-4"></i>Upload</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upload-hair.html"><i class="flaticon solid user-4"></i>Hair 
+                            post</a></li>
+                        <li><a href="upload-makeup.html"><i class="flaticon solid eye-1"></i>Makeup post</a></li>
+                        <li><a href="upload-nails.html"><i class="flaticon solid brush-1"></i>Nails post</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-search pull-right hidden-sm">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+        
+<div id="wrapper" class="container">
+    <!-- SIDEBAR -->
+    <div id="sidebar-dashboard" class="col-xs-3 visible-lg visible-md">
+        <span class="sidebar-title">Your Acount</span>
+        <ul>
+            <li class="active">
+                <a href="#account" data-toggle="tab">
+                    <span><i class="flaticon solid gear-2"></i> Account</span>
+                </a>
+            </li>
+            <li>
+                <a href="#profile" data-toggle="tab">
+                    <span><i class="flaticon solid user-1"></i> Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#password" data-toggle="tab">
+                    <span><i class="flaticon solid key-1"></i> Password</span>
+                </a>
+            </li>
+            <li>
+                <a href="#salon-services" data-toggle="tab">
+                    <span><i class="flaticon solid credit-card-1"></i> Services</span>
+                </a>
+            </li>
+            <li>
+                <a href="#salon-employees" data-toggle="tab">
+                    <span><i class="flaticon solid group-2"></i> Employees</span>
+                </a>
+            </li>
+            <li>
+                <a href="#email-notifications" data-toggle="tab">
+                    <span><i class="flaticon solid mail-1"></i> Email Notifications</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span><i class="flaticon solid move-right-1"></i> Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </div><!-- KEEP ALL SIDEBAR CONTENT INSIDE THIS TAG -->
+    
+    <div id="content-dash" class="col-md-9 account-settings">
+        <ul id="tabs" class="tabs row visible-xs visible-sm">
+            <li class="active"><a href="#account" data-toggle="tab">Account</a></li>
+            <li><a href="#profile" data-toggle="tab">Profile</a></li>
+            <li><a href="#password" data-toggle="tab">Password</a></li>
+            <li><a href="#salon-services" data-toggle="tab">Services</a></li>
+            <li><a href="#salon-employees" data-toggle="tab">Employees</a></li>
+            <li><a href="#email-notifications" data-toggle="tab">Email Notifications</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="account">
+                <div class="settings-header">
+                    <h2>Account</h2>
+                    <p>Change your basic account and location settings.</p>
+                </div>
+                <div>
+                    <h5>Username</h5>
+                    <input id="user_username" class="form-control" maxlength="15" name="user[username]" type="text" value="saloncyborg">
+                    <p class="sub-text">http://salonsocial.com/saloncyborg</p>
+                </div>
+                <div>
+                    <h5>Email Address</h5>
+                    <input id="user_email" class="form-control" name="user[email]" type="text" value="hello@saloncyborg.com">
+                    <p class="sub-text">Your email address will not be publicly displayed</p>
+                </div>
+                <div>
+                    <h5>Time Zone</h5>
+                    <select id="user_time_zone" class="form-control dd" name="user[time_zone]">
+                        <option data-offset="-36000" value="Hawaii">(GMT-10:00) Hawaii</option>
+                        <option data-offset="-32400" value="Alaska">(GMT-09:00) Alaska</option>
+                        <option data-offset="-28800" value="Pacific Time (US &amp; Canada)" selected="">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                        <option data-offset="-25200" value="Arizona">(GMT-07:00) Arizona</option>
+                        <option data-offset="-25200" value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                        <option data-offset="-21600" value="Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                        <option data-offset="-18000" value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                        <option data-offset="-18000" value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                        <option data-offset="" value="">-------------</option>
+                        <option data-offset="-39600" value="International Date Line West">(GMT-11:00) International Date Line West</option>
+                        <option data-offset="-39600" value="Midway Island">(GMT-11:00) Midway Island</option>
+                        <option data-offset="-39600" value="Samoa">(GMT-11:00) Samoa</option>
+                        <option data-offset="-28800" value="Tijuana">(GMT-08:00) Tijuana</option>
+                        <option data-offset="-25200" value="Chihuahua">(GMT-07:00) Chihuahua</option>
+                        <option data-offset="-25200" value="Mazatlan">(GMT-07:00) Mazatlan</option>
+                        <option data-offset="-21600" value="Central America">(GMT-06:00) Central America</option>
+                        <option data-offset="-21600" value="Guadalajara">(GMT-06:00) Guadalajara</option>
+                        <option data-offset="-21600" value="Mexico City">(GMT-06:00) Mexico City</option>
+                        <option data-offset="-21600" value="Monterrey">(GMT-06:00) Monterrey</option>
+                        <option data-offset="-21600" value="Saskatchewan">(GMT-06:00) Saskatchewan</option>
+                        <option data-offset="-18000" value="Bogota">(GMT-05:00) Bogota</option>
+                        <option data-offset="-18000" value="Lima">(GMT-05:00) Lima</option>
+                        <option data-offset="-18000" value="Quito">(GMT-05:00) Quito</option>
+                        <option data-offset="-16200" value="Caracas">(GMT-04:30) Caracas</option>
+                        <option data-offset="-14400" value="Atlantic Time (Canada)">(GMT-04:00) Atlantic Time (Canada)</option>
+                        <option data-offset="-14400" value="La Paz">(GMT-04:00) La Paz</option>
+                        <option data-offset="-14400" value="Santiago">(GMT-04:00) Santiago</option>
+                        <option data-offset="-12600" value="Newfoundland">(GMT-03:30) Newfoundland</option>
+                        <option data-offset="-10800" value="Brasilia">(GMT-03:00) Brasilia</option>
+                        <option data-offset="-10800" value="Buenos Aires">(GMT-03:00) Buenos Aires</option>
+                        <option data-offset="-10800" value="Georgetown">(GMT-03:00) Georgetown</option>
+                        <option data-offset="-10800" value="Greenland">(GMT-03:00) Greenland</option>
+                        <option data-offset="-7200" value="Mid-Atlantic">(GMT-02:00) Mid-Atlantic</option>
+                        <option data-offset="-3600" value="Azores">(GMT-01:00) Azores</option>
+                        <option data-offset="-3600" value="Cape Verde Is.">(GMT-01:00) Cape Verde Is.</option>
+                        <option data-offset="0" value="Casablanca">(GMT) Casablanca</option>
+                        <option data-offset="0" value="Dublin">(GMT) Dublin</option>
+                        <option data-offset="0" value="Edinburgh">(GMT) Edinburgh</option>
+                        <option data-offset="0" value="Lisbon">(GMT) Lisbon</option>
+                        <option data-offset="0" value="London">(GMT) London</option>
+                        <option data-offset="0" value="Monrovia">(GMT) Monrovia</option>
+                        <option data-offset="3600" value="Amsterdam">(GMT+01:00) Amsterdam</option>
+                        <option data-offset="3600" value="Belgrade">(GMT+01:00) Belgrade</option>
+                        <option data-offset="3600" value="Berlin">(GMT+01:00) Berlin</option>
+                        <option data-offset="3600" value="Bern">(GMT+01:00) Bern</option>
+                        <option data-offset="3600" value="Bratislava">(GMT+01:00) Bratislava</option>
+                        <option data-offset="3600" value="Brussels">(GMT+01:00) Brussels</option>
+                        <option data-offset="3600" value="Budapest">(GMT+01:00) Budapest</option>
+                        <option data-offset="3600" value="Copenhagen">(GMT+01:00) Copenhagen</option>
+                        <option data-offset="3600" value="Ljubljana">(GMT+01:00) Ljubljana</option>
+                        <option data-offset="3600" value="Madrid">(GMT+01:00) Madrid</option>
+                        <option data-offset="3600" value="Paris">(GMT+01:00) Paris</option>
+                        <option data-offset="3600" value="Prague">(GMT+01:00) Prague</option>
+                        <option data-offset="3600" value="Rome">(GMT+01:00) Rome</option>
+                        <option data-offset="3600" value="Sarajevo">(GMT+01:00) Sarajevo</option>
+                        <option data-offset="3600" value="Skopje">(GMT+01:00) Skopje</option>
+                        <option data-offset="3600" value="Stockholm">(GMT+01:00) Stockholm</option>
+                        <option data-offset="3600" value="Vienna">(GMT+01:00) Vienna</option>
+                        <option data-offset="3600" value="Warsaw">(GMT+01:00) Warsaw</option>
+                        <option data-offset="3600" value="West Central Africa">(GMT+01:00) West Central Africa</option>
+                        <option data-offset="3600" value="Zagreb">(GMT+01:00) Zagreb</option>
+                        <option data-offset="7200" value="Athens">(GMT+02:00) Athens</option>
+                        <option data-offset="7200" value="Bucharest">(GMT+02:00) Bucharest</option>
+                        <option data-offset="7200" value="Cairo">(GMT+02:00) Cairo</option>
+                        <option data-offset="7200" value="Harare">(GMT+02:00) Harare</option>
+                        <option data-offset="7200" value="Helsinki">(GMT+02:00) Helsinki</option>
+                        <option data-offset="7200" value="Istanbul">(GMT+02:00) Istanbul</option>
+                        <option data-offset="7200" value="Jerusalem">(GMT+02:00) Jerusalem</option>
+                        <option data-offset="7200" value="Kyiv">(GMT+02:00) Kyiv</option>
+                        <option data-offset="7200" value="Pretoria">(GMT+02:00) Pretoria</option>
+                        <option data-offset="7200" value="Riga">(GMT+02:00) Riga</option>
+                        <option data-offset="7200" value="Sofia">(GMT+02:00) Sofia</option>
+                        <option data-offset="7200" value="Tallinn">(GMT+02:00) Tallinn</option>
+                        <option data-offset="7200" value="Vilnius">(GMT+02:00) Vilnius</option>
+                        <option data-offset="10800" value="Baghdad">(GMT+03:00) Baghdad</option>
+                        <option data-offset="10800" value="Kuwait">(GMT+03:00) Kuwait</option>
+                        <option data-offset="10800" value="Minsk">(GMT+03:00) Minsk</option>
+                        <option data-offset="10800" value="Nairobi">(GMT+03:00) Nairobi</option>
+                        <option data-offset="10800" value="Riyadh">(GMT+03:00) Riyadh</option>
+                        <option data-offset="12600" value="Tehran">(GMT+03:30) Tehran</option>
+                        <option data-offset="14400" value="Abu Dhabi">(GMT+04:00) Abu Dhabi</option>
+                        <option data-offset="14400" value="Baku">(GMT+04:00) Baku</option>
+                        <option data-offset="14400" value="Moscow">(GMT+04:00) Moscow</option>
+                        <option data-offset="14400" value="Muscat">(GMT+04:00) Muscat</option>
+                        <option data-offset="14400" value="St. Petersburg">(GMT+04:00) St. Petersburg</option>
+                        <option data-offset="14400" value="Tbilisi">(GMT+04:00) Tbilisi</option>
+                        <option data-offset="14400" value="Volgograd">(GMT+04:00) Volgograd</option>
+                        <option data-offset="14400" value="Yerevan">(GMT+04:00) Yerevan</option>
+                        <option data-offset="16200" value="Kabul">(GMT+04:30) Kabul</option>
+                        <option data-offset="18000" value="Islamabad">(GMT+05:00) Islamabad</option>
+                        <option data-offset="18000" value="Karachi">(GMT+05:00) Karachi</option>
+                        <option data-offset="18000" value="Tashkent">(GMT+05:00) Tashkent</option>
+                        <option data-offset="19800" value="Chennai">(GMT+05:30) Chennai</option>
+                        <option data-offset="19800" value="Kolkata">(GMT+05:30) Kolkata</option>
+                        <option data-offset="19800" value="Mumbai">(GMT+05:30) Mumbai</option>
+                        <option data-offset="19800" value="New Delhi">(GMT+05:30) New Delhi</option>
+                        <option data-offset="20700" value="Kathmandu">(GMT+05:45) Kathmandu</option>
+                        <option data-offset="21600" value="Almaty">(GMT+06:00) Almaty</option>
+                        <option data-offset="21600" value="Astana">(GMT+06:00) Astana</option>
+                        <option data-offset="21600" value="Dhaka">(GMT+06:00) Dhaka</option>
+                        <option data-offset="21600" value="Ekaterinburg">(GMT+06:00) Ekaterinburg</option>
+                        <option data-offset="21600" value="Sri Jayawardenepura">(GMT+06:00) Sri Jayawardenepura</option>
+                        <option data-offset="23400" value="Rangoon">(GMT+06:30) Rangoon</option>
+                        <option data-offset="25200" value="Bangkok">(GMT+07:00) Bangkok</option>
+                        <option data-offset="25200" value="Hanoi">(GMT+07:00) Hanoi</option>
+                        <option data-offset="25200" value="Jakarta">(GMT+07:00) Jakarta</option>
+                        <option data-offset="25200" value="Novosibirsk">(GMT+07:00) Novosibirsk</option>
+                        <option data-offset="28800" value="Beijing">(GMT+08:00) Beijing</option>
+                        <option data-offset="28800" value="Chongqing">(GMT+08:00) Chongqing</option>
+                        <option data-offset="28800" value="Hong Kong">(GMT+08:00) Hong Kong</option>
+                        <option data-offset="28800" value="Krasnoyarsk">(GMT+08:00) Krasnoyarsk</option>
+                        <option data-offset="28800" value="Kuala Lumpur">(GMT+08:00) Kuala Lumpur</option>
+                        <option data-offset="28800" value="Perth">(GMT+08:00) Perth</option>
+                        <option data-offset="28800" value="Singapore">(GMT+08:00) Singapore</option>
+                        <option data-offset="28800" value="Taipei">(GMT+08:00) Taipei</option>
+                        <option data-offset="28800" value="Ulaan Bataar">(GMT+08:00) Ulaan Bataar</option>
+                        <option data-offset="28800" value="Urumqi">(GMT+08:00) Urumqi</option>
+                        <option data-offset="32400" value="Irkutsk">(GMT+09:00) Irkutsk</option>
+                        <option data-offset="32400" value="Osaka">(GMT+09:00) Osaka</option>
+                        <option data-offset="32400" value="Sapporo">(GMT+09:00) Sapporo</option>
+                        <option data-offset="32400" value="Seoul">(GMT+09:00) Seoul</option>
+                        <option data-offset="32400" value="Tokyo">(GMT+09:00) Tokyo</option>
+                        <option data-offset="34200" value="Adelaide">(GMT+09:30) Adelaide</option>
+                        <option data-offset="34200" value="Darwin">(GMT+09:30) Darwin</option>
+                        <option data-offset="36000" value="Brisbane">(GMT+10:00) Brisbane</option>
+                        <option data-offset="36000" value="Canberra">(GMT+10:00) Canberra</option>
+                        <option data-offset="36000" value="Guam">(GMT+10:00) Guam</option>
+                        <option data-offset="36000" value="Hobart">(GMT+10:00) Hobart</option>
+                        <option data-offset="36000" value="Melbourne">(GMT+10:00) Melbourne</option>
+                        <option data-offset="36000" value="Port Moresby">(GMT+10:00) Port Moresby</option>
+                        <option data-offset="36000" value="Sydney">(GMT+10:00) Sydney</option>
+                        <option data-offset="36000" value="Yakutsk">(GMT+10:00) Yakutsk</option>
+                        <option data-offset="39600" value="New Caledonia">(GMT+11:00) New Caledonia</option>
+                        <option data-offset="39600" value="Solomon Is.">(GMT+11:00) Solomon Is.</option>
+                        <option data-offset="39600" value="Vladivostok">(GMT+11:00) Vladivostok</option>
+                        <option data-offset="43200" value="Auckland">(GMT+12:00) Auckland</option>
+                        <option data-offset="43200" value="Fiji">(GMT+12:00) Fiji</option>
+                        <option data-offset="43200" value="Kamchatka">(GMT+12:00) Kamchatka</option>
+                        <option data-offset="43200" value="Magadan">(GMT+12:00) Magadan</option>
+                        <option data-offset="43200" value="Marshall Is.">(GMT+12:00) Marshall Is.</option>
+                        <option data-offset="43200" value="Wellington">(GMT+12:00) Wellington</option>
+                        <option data-offset="46800" value="Nuku'alofa">(GMT+13:00) Nuku'alofa</option>
+                    </select>
+                    <p class="sub-text">Select the time your Salon is in</p>
+                </div>
+                <div class="mt-20">
+                    <button id="settings_save" class="btn btn-red" type="submit" disabled="disabled">Save changes</button>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="profile">
+                <div class="settings-header">
+                    <h2>Profile</h2>
+                    <p>Change the information and design visible on your public profile.</p>
+                </div>
+                <div class="mb-40">
+                    <h5>Photo</h5>
+                    <div>
+                        <img class="profile-pic pull-left" src="assets/img/users/salon.png">
+                        <div class="upload-tools">
+                            <div id="choose-photo" class="btn-group mb-10">
+                                <button type="button" class="btn btn-red dropdown-toggle" data-toggle="dropdown">
+                                    Choose Photo <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Upload Photo</a></li>
+                                    <li><a href="#">Take Photo</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Remove Photo</a></li>
+                                </ul>
+                            </div>
+                            <p>This photo is your Salon's identity on SalonSocial and will be visible as your profile image.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-40">
+                    <h5>Header</h5>
+                    <div>
+                        <img class="profile-pic pull-left" src="assets/img/header-salon.png">
+                        <div class="upload-tools">
+                            <div id="choose-photo" class="btn-group mb-10">
+                                <button type="button" class="btn btn-red dropdown-toggle" data-toggle="dropdown">
+                                    Choose Header <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Upload Photo</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Remove Photo</a></li>
+                                </ul>
+                            </div>
+                            <p>This photo appears as the header image of your Salon's profile. Recommended dimensions of 1170x240. Maximum file size of 5mb.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5>Name</h5>
+                    <input id="user_name" class="form-control" maxlength="20" name="user[name]" type="text" value="Salon Cyborg">
+                    <p class="sub-text">Enter your Salon name so people can recognize you</p>
+                </div>
+                <div>
+                    <h5>Location</h5>
+                    <input id="user_street" class="form-control" name="user[street]" type="text" value="420 Baller Avenue">
+                    <p class="sub-text">Street name and number</p>
+                    <input id="user_city" class="form-control" maxlength="20" name="user[city]" type="text" value="Los Angeles">
+                    <p class="sub-text">City</p>
+                    <input id="user_state" class="form-control" maxlength="2" name="user[state]" type="text" value="CA">
+                    <p class="sub-text">State</p>
+                </div>
+                <div>
+                    <h5>Phone</h5>
+                    <input id="user_phone" class="form-control" maxlength="40" name="user[phone]" type="text" value="310-420-6969">
+                    <p class="sub-text">Enter your Salon's phone number here</p>
+                </div>
+                <div>
+                    <h5>Website</h5>
+                    <input id="user_url" class="form-control" maxlength="40" name="user[url]" type="text" value="http://saloncyborg.com">
+                    <p class="sub-text">Enter your Salon's website or blog address here</p>
+                </div>
+                <div>
+                    <h5>Bio</h5>
+                    <textarea class="form-control" maxlength="300" id="user_description" name="user[description]">This is where they would write their bio. This is where they would write their bio. This is where they would write their bio. This is where they would write their bio.</textarea>
+                    <p class="sub-text">About your Salon in 300 characters or less</p>
+                </div>
+                <div class="mt-20">
+                    <button id="settings_save" class="btn btn-red" type="submit" disabled="disabled">Save changes</button>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="password">
+                <div class="settings-header">
+                    <h2>Password</h2>
+                    <p>Change your password or recover your current one.</p>
+                </div>
+                <div>
+                    <h5>Current Password</h5>
+                    <input id="current_password" class="form-control" name="current_password" type="password">
+                    <a href="#"><p class="sub-text">Forgot your Password?</p></a>
+                </div>
+                <div>
+                    <h5>New Password</h5>
+                    <input id="user_password" class="form-control" name="user_password" type="password">
+                </div>
+                <div>
+                    <h5>Verify Password</h5>
+                    <input id="user_password_confirmation" class="form-control" name="user_password_confirmation" type="password">
+                </div>
+                <div class="mt-20">
+                    <button id="settings_save" class="btn btn-red" type="submit" disabled="disabled">Save changes</button>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="salon-services">
+                <div class="settings-header">
+                    <h2>Services</h2>
+                    <p>Enter the services your Salon provides.</p>
+                </div>
+                <div>
+                    <h4 class="bold mt-20 mb-10">Add Service</h4>
+                    <input id="service_name" class="form-control" name="service_name" type="text" value="Name">
+                    <p class="sub-text">Service name</p>
+                    <input id="service_price" class="form-control" name="service_price" type="text" value="Price">
+                    <p class="sub-text">Service price</p>
+                    <input id="service_time" class="form-control" name="service_time" type="text" value="Time">
+                    <p class="sub-text">Service time</p>
+                    <select id="service_type" class="form-control dd" name="service[type]">
+                        <option value="service-hair">Hair</option>
+                        <option value="service-makeup">Makeup</option>
+                        <option value="service-nails">Nails</option>
+                    </select>
+                    <p class="sub-text">Service type</p>
+                    <button id="add_service_btn" class="btn btn-red" type="submit" disabled="disabled"><i class="flaticon solid plus-1 mr-5"></i>Add Service</button>
+                </div>
+                <div>
+                    <h4 class="bold mt-30 mb-10">Current Services</h4>
+                    <div class="services row">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Hair Services</th>
+                                    <th>Price</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Men's Haircut</td>
+                                    <td>$35</td>
+                                    <td>45m</td>
+                                    <td><button id="remove_service" class="btn btn-xs btn-danger pull-right" type="submit">Remove Service</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Women's Haircut</td>
+                                    <td>$55</td>
+                                    <td>1hr</td>
+                                    <td><button id="remove_service" class="btn btn-xs btn-danger pull-right" type="submit">Remove Service</button></td>
+                                </tr>
+                            </tbody>
+                            <thead class="thead-spacer">
+                                <tr>  
+                                    <th>Nail Services</th>
+                                    <th>Price</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Manicure</td>
+                                    <td>$35</td>
+                                    <td>45m</td>
+                                    <td><button id="remove_service" class="btn btn-xs btn-danger pull-right" type="submit">Remove Service</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Pedicure</td>
+                                    <td>$45</td>
+                                    <td>1hr</td>
+                                    <td><button id="remove_service" class="btn btn-xs btn-danger pull-right" type="submit">Remove Service</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="salon-employees">
+                <div class="settings-header">
+                    <h2>Employees</h2>
+                    <p>Link your employee's SalonSocial profiles with your Salon's profile. They will appear on the sidebar on your Salon's profile page, and any posts made by your employees will appear on your Salon's profile page.</p>
+                </div>
+                <div>
+                    <h5>Add Employee</h5>
+                    <input id="add_employee" class="form-control" name="add_employee" type="text" value="Search by name or username">
+                    <p class="sub-text">Enter employee's name or username</p>
+                    <button id="add_employee_btn" class="btn btn-red mt-10" type="submit" disabled="disabled"><i class="flaticon solid plus-1 mr-5"></i>Add Employee</button>
+                </div>
+                <div>
+                    <h5>Current Employees</h5>
+                    <div class="employee-table row">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td class="first-td">
+                                        <img class="profile-pic small" src="assets/img/users/kevin.jpg">
+                                    </td>
+                                    <td>
+                                        <span class="bold">Kevin Michael</span>
+                                        <span class="pull-right">7/1/13</span>
+                                        <div class="red bold">@kevinthecyborg</div>
+                                    <button id="remove_employee" class="btn btn-sm btn-danger mt-10" type="submit">Remove Employee</button>   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first-td">
+                                        <img class="profile-pic small" src="assets/img/users/kevin.jpg">
+                                    </td>
+                                    <td>
+                                        <span class="bold">Kevin Michael</span>
+                                        <span class="pull-right">7/1/13</span>
+                                        <div class="red bold">@kevinthecyborg</div>
+                                    <button id="remove_employee" class="btn btn-sm btn-danger mt-10" type="submit">Remove Employee</button>   
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="email-notifications">
+                <div class="settings-header">
+                    <h2>Email Notifications</h2>
+                    <p>Control when and how often SalonSocial sends emails to you.</p>
+                </div>
+                <div class="sub-update">
+                    <h4>Updates from SalonSocial</h4>
+                    <h5>Newsletter</h5>
+                    <input id="sub_news" type="checkbox" name="sub[news]" value="1" />
+                    <label class="string optional" for="sub_news"><i class="flaticon solid checkmark-1"></i> Subscribe</label>
+                    <p class="sub-text">Subscribe to the SalonSocial weekly newsletter</p>
+                </div>
+                <div class="sub-update mb-30">
+                    <h5>Blog</h5>
+                    <input id="sub_blog" type="checkbox" name="sub[blog]" value="1" />
+                    <label class="string optional" for="sub_blog"><i class="flaticon solid checkmark-1"></i> Subscribe</label>
+                    <p class="sub-text">Subscribe to reveive updates when new blog posts are added</p>
+                </div>
+                <div>
+                    <h4>Activity related to you and your posts</h4>
+                    <h5>Email me when</h5>
+                    <div>
+                        <input id="sub_review" type="checkbox" name="sub[review]" value="1" />
+                        <label class="string optional" for="sub_review"><i class="flaticon solid checkmark-1"></i> My Salon receives a review</label>
+                    </div>
+                    <div>   
+                        <input id="sub_fav" type="checkbox" name="sub[fav]" value="1" />
+                        <label class="string optional" for="sub_fav"><i class="flaticon solid checkmark-1"></i> My Salon is favorited</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div><!-- /content -->
+    
+</div>
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </body>
+</html>

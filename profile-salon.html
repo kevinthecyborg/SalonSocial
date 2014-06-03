@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SalonSocial - Empowering the Salon Community</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <style>
+            body {
+                padding-top: 122px;
+                padding-bottom: 60px;
+            }
+        </style>
+        <!-- TODO: Complete this project :) -->
+    </head>
+    <body>
+        <nav id="usernav" class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
+    <div class="container">    
+        <div class="navbar-header">
+            <a class="navbar-brand nav-logo" href="index.html"></a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle navbar-text" data-toggle="dropdown" href="#">Sign in</a>
+                <ul class="dropdown-menu sign-in">
+                    <li>
+                        <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                            <p>Username or Email</p>
+                            <input id="user_username_signup" class="form-control mb-5" type="text" name="user[username]" size="30" placeholder="Username" />
+                            <p class="inline">Password </p><a href="#"> Forgot?</a>
+                            <input id="user_password_signup" class="form-control mb-5" type="password" name="user[password]" size="30" placeholder="Password" />
+                            <input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1" />
+                            <label id="rememberMe" class="string optional w-100" for="user_remember_me"><i class="flaticon solid checkmark-1"></i> Remember me</label>
+                            <input id="sign-in-btn" class="btn btn-red w-100" type="submit" name="commit" value="Sign in" />
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <btn role="button" class="dropdown-toggle btn btn-red" data-toggle="dropdown">Sign up</btn>
+                <ul class="dropdown-menu sign-up">
+                    <li id="sign-up-pro" class="mb-5">
+                        <a href="#modal-pro" role="button" class="btn btn-red" data-toggle="modal">Join as a <strong>Professional</strong></a>
+                    </li>
+                    <li id="sign-up-client" class="mb-5">
+                        <a href="#modal-client" role="button" class="btn btn-blue" data-toggle="modal">Join as a <strong>Client</strong></a>
+                    </li>
+                    <li id="sign-up-salon">
+                        <a href="#modal-salon" role="button" class="btn btn-dark" data-toggle="modal">Join as a <strong>Salon</strong></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+        <nav id="navbar" class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand nav-logo visible-xs" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid house-2"></i>Stream</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid house"></i>My Stream</a></li>
+                        <li><a href="index.html"><i class="flaticon solid rocket-1"></i>Trending</a></li>
+                        <li><a href="#"><i class="flaticon solid nature-2"></i>New</a></li>
+                        <li><a href="#"><i class="flaticon solid trophy-1"></i>Featured</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid explore"></i>Explore</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid user-4"></i>Hair</a></li>
+                        <li><a href="#"><i class="flaticon solid eye-1"></i>Makeup</a></li>
+                        <li><a href="#"><i class="flaticon solid brush-1"></i>Nails</a></li>
+                        <li><a href="#"><i class="flaticon solid tag-1"></i>Products</a></li>
+                        <li><a href="#"><i class="flaticon solid group-1"></i>Professionals</a></li>
+                        <li><a href="#"><i class="flaticon solid group-2"></i>Clients</a></li>
+                        <li><a href="#"><i class="flaticon solid store-2"></i>Salons</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="flaticon solid compose-4"></i>Blog</a></li>
+                <li><a href="#"><i class="flaticon solid chat-3"></i>Forum</a></li>
+                <li><a href="profile-professional.html"><i class="flaticon solid id-2"></i>Profile</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid camera-4"></i>Upload</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upload-hair.html"><i class="flaticon solid user-4"></i>Hair 
+                            post</a></li>
+                        <li><a href="upload-makeup.html"><i class="flaticon solid eye-1"></i>Makeup post</a></li>
+                        <li><a href="upload-nails.html"><i class="flaticon solid brush-1"></i>Nails post</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-search pull-right hidden-sm">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+        
+<div id="wrapper" class="container">
+    <div class="header row">
+        <img class="header-img" src="assets/img/header-salon.png">
+    </div>
+    
+    <div id="content" class="col-md-8">
+        
+        <div class="profile-header row"> 
+            <img class="profile-pic pull-left" src="assets/img/users/salon.png">
+            <ul class="profile-name">
+                <li><h1 class="realname-profile">Salon Cyborg</h1></li>
+                <li><a href="#"><span class="username-profile-stylist">@saloncyborg</span></a></li>
+                <li><a href="#" title="Get more with a PRO plan"><span class="pro-badge">PRO</span></a></li>
+            </ul>
+            <ul class="profile-info">
+                <li><i class="flaticon solid house-3"></i><a href="#"> Hollywood, CA</a></li>
+                <li><i class="flaticon solid phone-3"></i> 310-795-2623</li>
+                <li><i class="flaticon solid earth-1"></i><a href="#"> saloncyborg.com</a></li>
+            </ul>
+            <div class="clearfix visible-xs"></div>
+            <span class="flw-msg">
+                <button class="btn fav btn-dark mt-8"><i class="flaticon solid heart-1 mr-5"></i> Favorited</button>
+                <button class="btn btn-dark btn-msg mt-8"><i class="flaticon solid mail-4"></i></button>
+            </span>
+            <div class="stats">
+                <a href="#" title="12.6m Hype">
+                    <i class="flaticon solid megaphone-1 hype"></i><span class="mr-20"> 12.6m</span>
+                </a>
+                <a href="#" title="27k Favorites">
+                    <i class="flaticon solid heart-1 fav"></i><span class="mr-20"> 27k</span>
+                </a>
+            </div>
+        </div>
+
+        <ul id="tabs" class="tabs row">
+            <li class="active"><a href="#post-tab" data-toggle="tab">Posts</a><span class="tabs-count">1</span></li>
+            <li><a href="#services-tab" data-toggle="tab">Services</a><span class="tabs-count">4</span></li>
+            <li><a href="#grid-view-fav" data-toggle="tab">Favorites</a><span class="tabs-count">6</span></li>
+            <li><a href="#reviews-tab" data-toggle="tab">Reviews</a><span class="tabs-count">9</span></li>
+        </ul>
+
+         <div id="tabContent" class="tab-content">
+            <!-- POST TAB -->
+            <div class="tab-pane fade in active" id="post-tab">
+                <div>
+                    <a href="#" role="button" class="btn btn-node-nav">&laquo; Back to Posts</a>
+                </div>
+                <div class="post row">
+                    <div class="col-md-9">
+                        <div id="title">
+                            <img class="profile-pic pp-50 pull-left" src="assets/img/users/kevin.jpg">
+                                
+                                <ul class="postTitle"><h1>This is the post title</h1></li></ul>
+                                <ul><li><span class="postTitleDetails">BY 
+                                    <a href="#">
+                                        <span class="username-post-stylist">
+                                            @kevinthecyborg 
+                                        </span>    
+                                    </a>
+                                    <div class="clearfix visible-xs"></div>
+                                    MODELED BY 
+                                    <a href="#">
+                                        <span class="username-post-client">
+                                            @lady_bones999 
+                                        </span>
+                                    </a>
+                                    <span class="post-date">
+                                        | 8/8/13
+                                    </span>
+                                </span></li></ul>
+                            
+                        </div>
+                        <img class="social-media-buttons" src="assets/img/social-media.png">
+                        <div class="postImage"><img src="assets/img/posts/post.png"></div> 
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="small-stats">
+                            <li>
+                                <input id="post-hype" type="checkbox" value="option1" />
+                                <label class="checkbox" for="post-hype">
+                                    <i class="flaticon solid megaphone-1"></i> <strong>4.5k</strong> hypes
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="small-stats">
+                            <li>
+                                <input id="post-fav" type="checkbox" value="option1" />
+                                <label class="checkbox" for="post-fav">
+                                    <i class="flaticon solid heart-1"></i> <strong>799</strong> favorites
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="small-stats">
+                            <li>
+                               <a class="post-comment" href="#"><i class="flaticon solid post-comment-2"></i><span class="small-stats-text"> <strong>69</strong> comments</span></a>
+                            </li>
+                        </ul>
+                        <ul class="small-stats">
+                            <li class="post-views">
+                                <i class="flaticon solid eye-1"></i><span class="small-stats-text"> <strong>9,999</strong> views</span>
+                            </li>
+                        </ul>
+                        <ul class="small-stats">
+                            <li class="post-clock">
+                                <i class="flaticon solid clock-1"></i><span class="small-stats-text"> <strong>11m</strong></span>
+                            </li>
+                        </ul>
+                        <ul class="small-stats mb-15">
+                            <li>
+                                <a class="post-flag" href="#"><i class="flaticon solid flag-3"></i><span class="small-stats-text"> <strong>Flag</strong></span></a>
+                            </li>
+                        </ul>
+                        <div class="row tags">
+                            <div class="col-xs-6 col-md-12">    
+                                <ul id="post" class="tags-sidebar">
+                                    <li><strong>Post Tags</strong></li>
+                                </ul>
+                                <ul class="small-stats-details">
+                                    <li><strong>Stylist: </strong><a href="#"><em><span class="tag-details">Kevin M.</span></em></a></li>
+                                    <li><strong>Model: </strong><a href="#"><em><span class="tag-details">Lacie D.</span></em></a></li>
+                                    <li><strong>Makeup Artist: </strong><a href="#"><em><span class="tag-details">Lacie D.</span></em></a></li>
+                                    <li><strong>Photographer: </strong><a href="#"><em><span class="tag-details">Kevin M.</span></em></a></li>
+                                    <li><strong>Salon: </strong><a href="#"><em><span class="tag-details">Birds Barbershop</span></em></a></li>
+                                    <li><strong>City: </strong><a href="#"><em><span class="tag-details">Austin, TX</span></em></a></li>
+                                    <li><strong>Sex: </strong><a href="#"><em><span class="tag-details">Womens</span></em></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-md-12">
+                                <ul id="style" class="tags-sidebar">
+                                    <li><strong>Hair Tags</strong></li>
+                                </ul>
+                                <ul class="small-stats-details">
+                                    <li><strong>Style: </strong><a href="#"><em><span class="tag-details">Curls</span></em></a></li>
+                                    <li><strong>Length: </strong><a href="#"><em><span class="tag-details">Long</span></em></a></li>
+                                    <li><strong>Color: </strong><a href="#"><em><span class="tag-details">Red</span></em></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-md-12">    
+                                <ul id="product" class="tags-sidebar">
+                                    <li><strong>Hair Product Tags</strong></li>
+                                </ul>
+                                <ul class="small-stats-details">
+                                    <li><a href="#"><em><span class="tag-details">Bumble & Bumble</span></em></a></li>
+                                    <li><a href="#"><em><span class="tag-details">Sumo Tech</span></em></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-md-12">    
+                                <ul id="product" class="tags-sidebar">
+                                    <li><strong>Makeup Product Tags</strong></li>
+                                </ul>
+                                <ul class="small-stats-details">
+                                    <li><a href="#"><em><span class="tag-details">MAC</span></em></a></li>
+                                    <li><a href="#"><em><span class="tag-details">Graph Black</span></em></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row tags">   
+                            <div class="col-xs-6 col-md-12">    
+                                <ul id="custom" class="tags-sidebar">
+                                    <li><strong>Custom Tags</strong></li>
+                                </ul>
+                                <ul class="small-stats-details">
+                                    <li><a href="#"><em><span class="tag-details">Custom Tag</span></em></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICES TAB -->
+            <div class="tab-pane fade" id="services-tab">
+                <div class="services row">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Hair Services</th>
+                                <th>Price</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Men's Haircut</td>
+                                <td>$35</td>
+                                <td>45m</td>
+                            </tr>
+                            <tr>
+                                <td>Women's Haircut</td>
+                                <td>$55</td>
+                                <td>1hr</td>
+                            </tr>
+                        </tbody>
+                        <thead class="thead-spacer">
+                            <tr>  
+                                <th>Nail Services</th>
+                                <th>Price</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Manicure</td>
+                                <td>$35</td>
+                                <td>45m</td>
+                            </tr>
+                            <tr>
+                                <td>Pedicure</td>
+                                <td>$45</td>
+                                <td>1hr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- FAVORITES TAB -->
+            <div class="tab-pane fade" id="grid-view-fav">
+                <div class="content-title">
+                    Hair Styles<span class="content-title-count">6</span>
+                </div>
+                <div class="col-32p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-32p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-32p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+
+                <div class="col-32p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-32p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-32p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="back-forward">
+                    <a href="#" role="button" class="btn older">&laquo; Older</a>
+                    <a href="#" role="button" class="btn newer">Newer &raquo;</a>
+                </div>
+            </div>
+
+            <!-- REVIEWS TAB -->
+            <div class="tab-pane fade" id="reviews-tab">
+                <div class="reviews row">
+                    <div class="comment-sorting mb-15">   
+                        <input id="newest" type="radio" name="nop" value="option1" checked/>
+                        <label class="radio inline mr-5" for="newest">
+                            Newest
+                        </label>
+                        |
+                        <input id="oldest" type="radio" name="nop" value="option2" />
+                        <label class="radio inline mr-5" for="oldest">
+                            Oldest
+                        </label>
+                        |
+                        <input id="popular" type="radio" name="nop" value="option3" />
+                        <label class="radio inline" for="popular">
+                            Popular
+                        </label>
+                    </div>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="profile-pic pp-50" src="assets/img/users/kevin.jpg">
+                                </td>
+                                <td>
+                                    <span class="red bold">@kevinthecyborg</span>
+                                    <span class="pull-right">7/1/13</span>
+                                <br>
+                                <br>
+                                    This is where the person's review would go that they write themselves about the stylist or experience they had with the stylist.
+
+                                    This is where the person's review would go that they write themselves about the stylist or experience they had with the stylist.
+                                    <br><br>
+                                    <div class="pull-right inline">
+                                        <span class="blue bold">12</span>
+                                        <input id="like-comment-1" type="checkbox" value="option1" />
+                                        <label class="checkbox mr-5" for="like-comment-1">
+                                            <i class="flaticon solid thumbs-up-1"></i> Like
+                                        </label>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn flag dropdown-toggle" data-toggle="dropdown">
+                                            <i class="flaticon solid flag-3"></i> <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="flaticon solid trash-3 mr-5"></i> Spam</a></li>
+                                                <li><a href="#"><i class="flaticon solid exclamation-point-2 mr-5"></i> Offensive</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="profile-pic pp-50" src="assets/img/users/kevin.jpg">
+                                </td>
+                                <td>
+                                    <span class="red bold">@kevinthecyborg</span>
+                                    <span class="pull-right">7/1/13</span>
+                                <br>
+                                <br>
+                                    This is where the person's review would go that they write themselves about the stylist or experience they had with the stylist.
+                                    <br><br>
+                                    <div class="pull-right inline">
+                                        <span class="blue bold">9</span>
+                                        <input id="like-comment-2" type="checkbox" value="option1" />
+                                        <label class="checkbox mr-5" for="like-comment-2">
+                                            <i class="flaticon solid thumbs-up-1"></i> Like
+                                        </label>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn flag dropdown-toggle" data-toggle="dropdown">
+                                            <i class="flaticon solid flag-3"></i> <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#"><i class="flaticon solid trash-3 mr-5"></i> Spam</a></li>
+                                                <li><a href="#"><i class="flaticon solid exclamation-point-2 mr-5"></i> Offensive</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div><!-- /TAB CONTENT -->
+
+    </div><!-- /CONTENT -->
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="col-md-4">
+        <div class="about mb-25">
+            <ul class="titlebar">
+                <li>About Salon Cyborg</li>
+            </ul>
+            <ul class="pl-0 georgia">
+                <li class="bold dark">420 Baller Avenue</li>
+                <li class="bold dark">Hollywood, CA 90232</li>
+            </ul>
+            <p>This is where the salon's bio would go. Cyborg assimilation underway. This is where the salon's bio would go. Cyborg assimilation underway. This is where the salon's bio would go. Cyborg assimilation underway. This is where the salon's bio would go. Cyborg assimilation underway.</p>
+        </div>
+        <div class="skills mb-25">
+            <ul class="titlebar">
+                <li>Services</li>
+            </ul>
+            <div class="label">Women's Hair</div>
+            <div class="label">Men's Hair</div>
+            <div class="label">Razor Cuts</div>
+            <div class="label">Perms</div>
+            <div class="label">Updo</div>
+            <div class="label">Manicures</div>
+            <div class="label">Pedicures</div>
+        </div>
+        <div class="employees mb-25">
+            <ul class="titlebar">
+                <li>Salon Professionals</li>
+            </ul>
+            
+            
+            <div class="col-32p">
+                <a href="#" title="Kevin Michael @kevinthecyborg"><img class="profile-pic employee-pic mb-10" src="assets/img/users/kevin.jpg"></a>
+                <a href="#" title="Kevin Michael @kevinthecyborg"><img class="profile-pic employee-pic mb-10" src="assets/img/users/kevin.jpg"></a>
+            </div>
+            <div class="col-2p"></div>
+            <div class="col-32p">
+                <a href="#" title="Kevin Michael @kevinthecyborg"><img class="profile-pic employee-pic mb-10" src="assets/img/users/kevin.jpg"></a>
+                <a href="#" title="Kevin Michael @kevinthecyborg"><img class="profile-pic employee-pic mb-10" src="assets/img/users/kevin.jpg"></a>
+            </div>
+            <div class="col-2p"></div>
+            <div class="col-32p">
+                <a href="#" title="Kevin Michael @kevinthecyborg"><img class="profile-pic employee-pic mb-10" src="assets/img/users/kevin.jpg"></a>
+                <a href="#" title="Kevin Michael @kevinthecyborg"><img class="profile-pic employee-pic mb-10" src="assets/img/users/kevin.jpg"></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="app-store-dl">
+            <ul class="titlebar">
+                <li>Download our Mobile App!</li>
+            </ul>
+            <a href="#" class="appStoreButton"></a>
+            <a href="#" class="appStoreButton appStoreButton-googleplay"></a>
+        </div>
+    </div><!-- /SIDEBAR --> 
+
+</div> <!-- /WRAPPER -->
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </body>
+</html>

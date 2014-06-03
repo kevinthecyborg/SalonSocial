@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SalonSocial - Empowering the Salon Community</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <style>
+            body {
+                padding-top: 122px;
+                padding-bottom: 60px;
+            }
+        </style>
+        <!-- TODO: Complete this project :) -->
+    </head>
+    <body>
+        <nav id="usernav" class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
+    <div class="container">    
+        <div class="navbar-header">
+            <a class="navbar-brand nav-logo" href="index.html"></a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle navbar-text" data-toggle="dropdown" href="#">Sign in</a>
+                <ul class="dropdown-menu sign-in">
+                    <li>
+                        <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                            <p>Username or Email</p>
+                            <input id="user_username_signup" class="form-control mb-5" type="text" name="user[username]" size="30" placeholder="Username" />
+                            <p class="inline">Password </p><a href="#"> Forgot?</a>
+                            <input id="user_password_signup" class="form-control mb-5" type="password" name="user[password]" size="30" placeholder="Password" />
+                            <input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1" />
+                            <label id="rememberMe" class="string optional w-100" for="user_remember_me"><i class="flaticon solid checkmark-1"></i> Remember me</label>
+                            <input id="sign-in-btn" class="btn btn-red w-100" type="submit" name="commit" value="Sign in" />
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <btn role="button" class="dropdown-toggle btn btn-red" data-toggle="dropdown">Sign up</btn>
+                <ul class="dropdown-menu sign-up">
+                    <li id="sign-up-pro" class="mb-5">
+                        <a href="#modal-pro" role="button" class="btn btn-red" data-toggle="modal">Join as a <strong>Professional</strong></a>
+                    </li>
+                    <li id="sign-up-client" class="mb-5">
+                        <a href="#modal-client" role="button" class="btn btn-blue" data-toggle="modal">Join as a <strong>Client</strong></a>
+                    </li>
+                    <li id="sign-up-salon">
+                        <a href="#modal-salon" role="button" class="btn btn-dark" data-toggle="modal">Join as a <strong>Salon</strong></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+        <nav id="navbar" class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand nav-logo visible-xs" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid house-2"></i>Stream</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid house"></i>My Stream</a></li>
+                        <li><a href="index.html"><i class="flaticon solid rocket-1"></i>Trending</a></li>
+                        <li><a href="#"><i class="flaticon solid nature-2"></i>New</a></li>
+                        <li><a href="#"><i class="flaticon solid trophy-1"></i>Featured</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid explore"></i>Explore</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid user-4"></i>Hair</a></li>
+                        <li><a href="#"><i class="flaticon solid eye-1"></i>Makeup</a></li>
+                        <li><a href="#"><i class="flaticon solid brush-1"></i>Nails</a></li>
+                        <li><a href="#"><i class="flaticon solid tag-1"></i>Products</a></li>
+                        <li><a href="#"><i class="flaticon solid group-1"></i>Professionals</a></li>
+                        <li><a href="#"><i class="flaticon solid group-2"></i>Clients</a></li>
+                        <li><a href="#"><i class="flaticon solid store-2"></i>Salons</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="flaticon solid compose-4"></i>Blog</a></li>
+                <li><a href="#"><i class="flaticon solid chat-3"></i>Forum</a></li>
+                <li><a href="profile-professional.html"><i class="flaticon solid id-2"></i>Profile</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid camera-4"></i>Upload</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upload-hair.html"><i class="flaticon solid user-4"></i>Hair 
+                            post</a></li>
+                        <li><a href="upload-makeup.html"><i class="flaticon solid eye-1"></i>Makeup post</a></li>
+                        <li><a href="upload-nails.html"><i class="flaticon solid brush-1"></i>Nails post</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-search pull-right hidden-sm">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+        
+	<div id="wrapper" class="container">
+        <div class="banner row"></div>
+            
+        <div id="content"></div>
+            <ul id="tabs" class="tabs row">
+                <li><i class="flaticon solid rocket-1"></i> TRENDING &raquo;</li>
+                <li class="active"><a href="#" data-toggle="tab">All</a></li>
+                <li><a href="#" data-toggle="tab">Hair</a></li>
+                <li><a href="#" data-toggle="tab">Makeup</a></li>
+                <li><a href="#" data-toggle="tab">Nails</a></li>
+                <li><a href="#" data-toggle="tab">Salons</a></li>
+                <li><a href="#" data-toggle="tab">Professionals</a></li>
+                <li><a href="#" data-toggle="tab">Products</a></li>
+            </ul>
+            
+            <div class="tab-pane fade in active" id="stream">
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+                <div class="col-2p"></div>
+                <div class="col-23p post-grid">
+                    <a href="#"><img class="post-grid-img" src="assets/img/posts/post.png"></a>
+                    <span class="post-grid-stats visible-lg">
+                        <span class="post-grid-hype">
+                            <input id="gv-hype" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-hype">
+                                <i class="flaticon solid megaphone-1"></i>18.4k
+                            </label>
+                        </span>
+                        <span class="post-grid-fav">
+                            <input id="gv-fav" type="checkbox" value="option1" />
+                            <label class="checkbox" for="gv-fav">
+                                <i class="flaticon solid heart-1"></i>1284
+                            </label>
+                        </span>
+                        <a href="#" class="post-grid-comment">
+                            <i class="flaticon solid post-comment-2"></i>153
+                        </a>
+                    </span>
+                    <div class="clearfix"></div>
+                    <span class="post-by hidden-xs">
+                        <img class="profile-pic pp-16" src="assets/img/users/kevin.jpg">
+                        <a href="#" class="red bold">Kevin Michael</a>
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Modal Professional -->
+            <div id="modal-pro" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="myModalLabel">Join as a <span class="red bold"><strong>Professional</strong></span></h3>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>
+                                    <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                                        <legend>ACCOUNT</legend>
+                                        <input id="user_username" class="form-control" type="text" name="user[username]" size="30" placeholder="Username" />
+                                        <input id="user_password" class="form-control" type="password" name="user[password]" size="30" placeholder="Password" />
+                                        <legend>PROFILE</legend>
+                                        <div class="col-32p mb-10">    
+                                            <button class="btn facebook">Use Facebook info</button>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">    
+                                            <button class="btn twitter">Use Twitter info</button>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">    
+                                            <button class="btn google-plus">Use Google+ info</button>
+                                        </div>
+                                        <input id="user_firstname" class="form-control" type="text" name="user[firstname]" size="30" placeholder="First Name" />
+                                        <input id="user_lastname" class="form-control" type="text" name="user[lastname]" size="30" placeholder="Last Name" />
+                                        <input id="dob" class="datepicker form-control" type="text" placeholder="Date of Birth" data-date-format="mm/dd/yy" data-date-startView="1" />
+                                        <input id="salon_name" class="form-control" type="text" name="salon[name]" size="30" placeholder="Salon Name" />
+                                        <select id="choice" class="form-control dd">
+                                            <option value="0" selected="selected">Industry Title</option>
+                                            <option value="1">Hair Stylist</option>
+                                            <option value="2">Makeup Artist</option>
+                                            <option value="3">Nail Technician</option>
+                                        </select>
+                                        <input id="user_email" class="form-control" type="text" name="user[email]" size="30" placeholder="Email" />
+                                        <input id="user_phone" class="form-control" type="text" name="user[phone]" size="30" placeholder="Phone (optional)" />
+                                        <div class="col-32p">
+                                            <input id="user_male_pro" type="radio" name="user[mfu]" value="option1" />
+                                            <label class="radio joinmfu" for="user_male_pro"> Male</label>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">
+                                            <input id="user_female_pro" type="radio" name="user[mfu]" value="option2" />
+                                            <label class="radio joinmfu" for="user_female_pro"> Female</label>
+                                        </div>
+                                        <div class="col-2p"></div>    
+                                        <div class="col-32p">
+                                            <input id="user_unspecified_pro" type="radio" name="user[mfu]" value="option3" /> 
+                                            <label class="radio joinmfu" for="user_unspecified_pro"> Unspecified</label>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-red w-100 mb-5" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal Client -->
+            <div id="modal-client" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="myModalLabel">Join as a <span class="blue bold"><strong>Client</strong></span></h3>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>
+                                    <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                                        <legend>ACCOUNT</legend>
+                                        <input id="user_username" class="form-control" type="text" name="user[username]" size="30" placeholder="Username" />
+                                        <input id="user_password" class="form-control" type="password" name="user[password]" size="30" placeholder="Password" />
+                                        <legend>PROFILE</legend>
+                                        <div class="col-32p mb-10">    
+                                            <button class="btn facebook">Use Facebook info</button>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">    
+                                            <button class="btn twitter">Use Twitter info</button>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">    
+                                            <button class="btn google-plus">Use Google+ info</button>
+                                        </div>
+                                        <input id="user_firstname" class="form-control" type="text" name="user[firstname]" size="30" placeholder="First Name" />
+                                        <input id="user_lastname" class="form-control" type="text" name="user[lastname]" size="30" placeholder="Last Name" />
+                                        <input id="dob" class="datepicker form-control" type="text" placeholder="Date of Birth" data-date-format="mm/dd/yy" data-date-start-view="2" />
+                                        <input id="user_email" class="form-control" type="text" name="user[email]" size="30" placeholder="Email" />
+                                        <input id="user_occupation" class="form-control" type="text" name="user[occupation]" size="30" placeholder="Your Occupation (optional)" />
+                                        <input id="user_phone" class="form-control" type="text" name="user[phone]" size="30" placeholder="Phone (optional)" />
+                                        <div class="col-32p">
+                                            <input id="user_male_client" type="radio" name="user[mfu]" value="option1" />
+                                            <label class="radio joinmfu" for="user_male_client"> Male</label>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">
+                                            <input id="user_female_client" type="radio" name="user[mfu]" value="option2" />
+                                            <label class="radio joinmfu" for="user_female_client"> Female</label>
+                                        </div>
+                                        <div class="col-2p"></div>    
+                                        <div class="col-32p">
+                                            <input id="user_unspecified_client" type="radio" name="user[mfu]" value="option3" /> 
+                                            <label class="radio joinmfu" for="user_unspecified_client"> Unspecified</label>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-red w-100 mb-5" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal Salon -->
+            <div id="modal-salon" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="myModalLabel">Join as a <span class="dark bold"><strong>Salon</strong></span></h3>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>
+                                    <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                                        <legend>ACCOUNT</legend>
+                                        <input id="user_username" class="form-control" type="text" name="user[username]" size="30" placeholder="Username" />
+                                        <input id="user_password" class="form-control" type="password" name="user[password]" size="30" placeholder="Password" />
+                                        <legend>PROFILE</legend>
+                                        <div class="col-32p mb-10">    
+                                            <button class="btn facebook">Use Facebook info</button>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">    
+                                            <button class="btn twitter">Use Twitter info</button>
+                                        </div>
+                                        <div class="col-2p"></div>
+                                        <div class="col-32p">    
+                                            <button class="btn google-plus">Use Google+ info</button>
+                                        </div>
+                                        <input id="user_email" class="form-control" type="text" name="user[email]" size="30" placeholder="Email" />
+                                        <input id="user_name" class="form-control" type="text" name="user[name]" size="30" placeholder="Salon Name" />
+                                        <input id="user_street" class="form-control" name="user[street]" type="text" placeholder="Street">
+                                        <input id="user_city" class="form-control" maxlength="20" name="user[city]" type="text" placeholder="City">
+                                        <input id="user_state" class="form-control" maxlength="2" name="user[state]" type="text" placeholder="State">
+                                        <input id="user_phone" class="form-control" type="text" name="user[phone]" size="30" placeholder="Phone" />
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer for-salon">
+                            <button class="btn btn-red w-100 mb-5" type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div><!-- /content -->
+            
+    </div>
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </body>
+</html>

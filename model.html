@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Model Example : Mixture + Bootstrap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <style>
+            body {
+                padding-top: 122px;
+                padding-bottom: 60px;
+            }
+        </style>
+        <!-- TODO: Complete this project :) -->
+    </head>
+    <body>
+        <nav id="usernav" class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
+    <div class="container">    
+        <div class="navbar-header">
+            <a class="navbar-brand nav-logo" href="index.html"></a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle navbar-text" data-toggle="dropdown" href="#">Sign in</a>
+                <ul class="dropdown-menu sign-in">
+                    <li>
+                        <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                            <p>Username or Email</p>
+                            <input id="user_username_signup" class="form-control mb-5" type="text" name="user[username]" size="30" placeholder="Username" />
+                            <p class="inline">Password </p><a href="#"> Forgot?</a>
+                            <input id="user_password_signup" class="form-control mb-5" type="password" name="user[password]" size="30" placeholder="Password" />
+                            <input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1" />
+                            <label id="rememberMe" class="string optional w-100" for="user_remember_me"><i class="flaticon solid checkmark-1"></i> Remember me</label>
+                            <input id="sign-in-btn" class="btn btn-red w-100" type="submit" name="commit" value="Sign in" />
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <btn role="button" class="dropdown-toggle btn btn-red" data-toggle="dropdown">Sign up</btn>
+                <ul class="dropdown-menu sign-up">
+                    <li id="sign-up-pro" class="mb-5">
+                        <a href="#modal-pro" role="button" class="btn btn-red" data-toggle="modal">Join as a <strong>Professional</strong></a>
+                    </li>
+                    <li id="sign-up-client" class="mb-5">
+                        <a href="#modal-client" role="button" class="btn btn-blue" data-toggle="modal">Join as a <strong>Client</strong></a>
+                    </li>
+                    <li id="sign-up-salon">
+                        <a href="#modal-salon" role="button" class="btn btn-dark" data-toggle="modal">Join as a <strong>Salon</strong></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+        <nav id="navbar" class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand nav-logo visible-xs" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid house-2"></i>Stream</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid house"></i>My Stream</a></li>
+                        <li><a href="index.html"><i class="flaticon solid rocket-1"></i>Trending</a></li>
+                        <li><a href="#"><i class="flaticon solid nature-2"></i>New</a></li>
+                        <li><a href="#"><i class="flaticon solid trophy-1"></i>Featured</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid explore"></i>Explore</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="flaticon solid user-4"></i>Hair</a></li>
+                        <li><a href="#"><i class="flaticon solid eye-1"></i>Makeup</a></li>
+                        <li><a href="#"><i class="flaticon solid brush-1"></i>Nails</a></li>
+                        <li><a href="#"><i class="flaticon solid tag-1"></i>Products</a></li>
+                        <li><a href="#"><i class="flaticon solid group-1"></i>Professionals</a></li>
+                        <li><a href="#"><i class="flaticon solid group-2"></i>Clients</a></li>
+                        <li><a href="#"><i class="flaticon solid store-2"></i>Salons</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="flaticon solid compose-4"></i>Blog</a></li>
+                <li><a href="#"><i class="flaticon solid chat-3"></i>Forum</a></li>
+                <li><a href="profile-professional.html"><i class="flaticon solid id-2"></i>Profile</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="flaticon solid camera-4"></i>Upload</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="upload-hair.html"><i class="flaticon solid user-4"></i>Hair 
+                            post</a></li>
+                        <li><a href="upload-makeup.html"><i class="flaticon solid eye-1"></i>Makeup post</a></li>
+                        <li><a href="upload-nails.html"><i class="flaticon solid brush-1"></i>Nails post</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-search pull-right hidden-sm">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+        
+	<div class="hero-unit">
+		<h1>Model</h1>
+		<h2>A basic example.</h2>
+		<p>List populated from the model:</p>
+		<ol>
+			
+  				<li><a href="http://twitter.com/@neiltak">Neil Kinnish</a></li>
+			
+  				<li><a href="http://twitter.com/@mikekus">Mike Kus</a></li>
+			
+  				<li><a href="http://twitter.com/@petetak">Pete Nelson</a></li>
+			
+		</ol>
+		<p>Todays date: 03 June 2014. Model created: 11.14.2012</p>
+	</div>
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </body>
+</html>
